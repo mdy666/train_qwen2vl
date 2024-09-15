@@ -10,10 +10,10 @@ import torch.distributed as dist
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model_path',type=str, default='/notebooks/qwen2-vl')
-    parser.add_argument('--data_path', type=str, default='/mnt/data/user/tc_agi/mdy/flickr8k/')
+    parser.add_argument('--model_path',type=str, default='qwen2-vl')
+    parser.add_argument('--data_path', type=str, default='flickr8k/')
     parser.add_argument('--deepspeed_config', type=str, default='ds_config.json')
-    parser.add_argument('--save_model_path', type=str, default='/notebooks/my_qwen2')
+    parser.add_argument('--save_model_path', type=str, default='my_qwen2')
     #剩下自行添加
     return parser.parse_args()
 
