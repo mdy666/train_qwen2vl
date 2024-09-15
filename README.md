@@ -1,3 +1,8 @@
+# package
+请更新相关包
+pip install --upgrade accelerate
+pip install --upgrade deepspeed
+
 # 训练
 主要针对图片进行训练，我以flicker8k为例，建议4张A100以上，使用deepspeed进行训练。
 如果想要更好的训练效果，建议改下参数之类的，我只是交大家让他跑起来
