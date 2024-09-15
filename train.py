@@ -28,7 +28,11 @@ if __name__ == '__main__':
     args = get_args()
 
     processor = CustomProcessor.from_pretrained(args.model_path)
+    processor.tokenizer.pad_token_id = processor.tokenizer.eos_token_id
+    processor.tokenizer.padding_side = 'right'
+    
     train_ds = Qwen2VLDatasets(args.data_path, processor, max_length=512, padding='max_length', truncation=True)
+    
     print_rank0('====================loading model=======================')
     config = AutoConfig.from_pretrained(args.model_path)
     model = Qwen2VLForConditionalGeneration(config)
