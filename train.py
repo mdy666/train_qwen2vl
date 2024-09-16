@@ -1,12 +1,9 @@
 import torch
-from dataset_and_processor import CustomProcessor, get_batch, Qwen2VLDatasets
-from torch.utils.data import DataLoader
-import argparse
-
-
-from transformers import TrainingArguments, Trainer, AutoConfig
-from transformers import Qwen2VLForConditionalGeneration
 import torch.distributed as dist
+from dataset_and_processor import CustomProcessor, get_batch, Qwen2VLDatasets
+from transformers import TrainingArguments, Trainer, AutoConfig, Qwen2VLForConditionalGeneration
+
+import argparse
 
 def get_args():
     parser = argparse.ArgumentParser()
