@@ -1,5 +1,5 @@
 import torch
-from dataset_and_models import CustomProcessor, get_batch, Qwen2VLDatasets
+from dataset_and_processor import CustomProcessor, get_batch, Qwen2VLDatasets
 from torch.utils.data import DataLoader
 import argparse
 
