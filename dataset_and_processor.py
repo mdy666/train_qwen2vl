@@ -18,8 +18,8 @@ class CustomProcessor(Qwen2VLProcessor):
                 if content[j]['type'] != 'image':
                     continue
                 pic = Image.open(content[j]['image'])
-                images.append(Image.open(content[j]['image']))
-
+                images.append(pic)
+                
         return self.image_processor(images, return_tensors=return_tensors) if images else None
     
 
