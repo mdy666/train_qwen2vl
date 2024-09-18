@@ -18,3 +18,5 @@ bash run.sh
 ![image](https://github.com/user-attachments/assets/9c27bde7-7c6d-4e0d-bff4-ec928c2232eb)
 
 请自行在dataset中进行处理，即self.data[i]， 无论多少轮，多少张图片都可以进行处理，建议使用json line文件
+
+CustomProcessor接收messages进行处理
